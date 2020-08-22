@@ -1,0 +1,93 @@
+<!--
+
+  User: ID,
+  user Name,
+  email,
+  password,
+  retype password,
+  security question,
+  security question answer,
+  first name,
+  last name,
+  employee number,
+  address,
+
+-->
+
+<h3 class="title">Register Users Below:</h3>
+
+<form class=form>
+  <div class="form-group">
+    <label for="txtUserID">User ID</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.id" name="id" placeholder="required">
+  </div>
+  <div class="form-group">
+    <label for="txtUserName">User Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.userName" name="userName" placeholder="required">
+  </div>
+  <div class="form-group">
+    <label for="txtEmail">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.email" name="email" placeholder="required">
+  </div>
+  <div class="form-group">
+    <label for="txtPassword">Password</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.password" name="password">
+  </div>
+  <div class="form-group">
+    <label for="txtRetypePassword">Retype Password</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="retypePassword"
+      name="retypePassword">
+    <div *ngIf="this.model.password !=retypePassword" class="alert alert-danger">
+      Password and Retype password doesn't match!
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="txtSecurityQuestion">Security Question</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.securityQuestion"
+      name="securityQuestion Answer">
+  </div>
+  <div class="form-group">
+    <label for="txtSecurityQuestionAnswer">Security Question Answer</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.securityQuestionAnswer"
+      name="firstName">
+  </div>
+  <div class="form-group">
+    <label for="txtFirstName">First Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.firstName"
+      name="lastName">
+  </div>
+  <div class="form-group">
+    <label for="txtLastName">Last Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.lastName"
+      name="employeeNumber">
+  </div>
+  <div class="form-group">
+    <label for="txtEmployeeNumber">Employee Number</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.employeeNumber"
+      name="fullAddress"  placeholder="required">
+  </div>
+  <div class="form-group">
+    <label for="txtAddress">Address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.fullAddress"
+      name="userName">
+  </div>
+  <div *ngIf="showAlert" class="alert alert-success">
+    The user has been registered!
+  </div>
+  <div>
+    <button [disabled]="shouldSaveDisabled()" (click)="saveUser()" type="button"
+      class="btn btn-secondary btn-lg">Register</button>
+  </div>
+</form>
+
+<!--
+
+1 - create a component userLogin
+2 - register the route
+3 - create the menu (navbar) link
+
+4 - login form
+5 - 2 vars on TS
+6 - Link vars and input fields
+
+-->

@@ -1,0 +1,16 @@
+<div class="todowrapper">
+  <div class="todo">
+    <h3>Todo List</h3>
+
+    <div class="form">
+      <input type="text" placeholder="What to do?" [(ngModel)]="todoText">
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
+
+    You have {{ todoList.length }} ToDos
+
+    <ul>
+      <li *ngFor="let todo of todoList">{{todo}}</li>
+    </ul>
+  </div>
+</div>

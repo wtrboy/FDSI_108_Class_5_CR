@@ -1,0 +1,30 @@
+<!-- <h3>Todo List</h3>
+
+<div class="form">
+  <input type="text" placeholder="What to do?" [(ngModel)]="todoText">
+  <button (click)="addTodo()">Add Todo</button>
+</div>
+
+You have {{ todoList.length }} ToDos
+
+<ul>
+  <li *ngFor="let todo of todoList">{{todo}}</li>
+</ul>
+
+<hr>
+<app-temp-calculator></app-temp-calculator>
+-->
+
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+<router-outlet>
+  <!-- Here, angular will render your pages-->
+</router-outlet>
+</div>
+
+<br>
+<footer>
+FOOTER CAN GO HERE (from app.component.html)
+</footer>
+<!--  -->
